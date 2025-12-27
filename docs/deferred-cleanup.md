@@ -1,8 +1,3 @@
----
-title: Deferred Cleanup
-description: Zig-inspired deferred cleanup that executes only when errors occur, ensuring resources are properly cleaned up on error paths.
----
-
 Zig-inspired deferred cleanup that executes only when errors occur, ensuring resources are properly cleaned up on error paths.
 
 ## Overview

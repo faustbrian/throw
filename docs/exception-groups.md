@@ -1,8 +1,3 @@
----
-title: Exception Groups
-description: Handle multiple exceptions as a single unit, inspired by Python 3.11's exception groups. Perfect for validation scenarios where multiple errors can occur simultaneously.
----
-
 Handle multiple exceptions as a single unit, inspired by Python 3.11's exception groups. Perfect for validation scenarios where multiple errors can occur simultaneously.
 
 ## Overview

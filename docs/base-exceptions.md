@@ -1,8 +1,3 @@
----
-title: Base Exceptions
-description: Throw provides three base exception classes that categorize errors by their nature, making error handling more semantic and maintainable.
----
-
 Throw provides three base exception classes that categorize errors by their nature, making error handling more semantic and maintainable.
 
 ## Overview

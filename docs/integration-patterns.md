@@ -1,8 +1,3 @@
----
-title: Integration Patterns
-description: This guide demonstrates how to integrate the Throw package with common Laravel patterns and third-party services.
----
-
 This guide demonstrates how to integrate the Throw package with common Laravel patterns and third-party services.
 
 ## Table of Contents

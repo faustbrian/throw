@@ -1,8 +1,3 @@
----
-title: Assertions
-description: Use the ensure() helper for fluent, readable guard clauses that throw exceptions or abort HTTP requests.
----
-
 Use the `ensure()` helper for fluent, readable guard clauses that throw exceptions or abort HTTP requests.
 
 ## Overview

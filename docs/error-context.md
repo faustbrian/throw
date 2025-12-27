@@ -1,8 +1,3 @@
----
-title: Error Context
-description: Add structured debugging information to exceptions using context, tags, and metadata. This makes error tracking, logging, and monitoring significantly more effective.
----
-
 Add structured debugging information to exceptions using context, tags, and metadata. This makes error tracking, logging, and monitoring significantly more effective.
 
 ## Overview

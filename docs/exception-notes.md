@@ -1,8 +1,3 @@
----
-title: Exception Notes
-description: Add breadcrumb-style annotations to exceptions for enhanced debugging context, inspired by Python's exception notes.
----
-
 Add breadcrumb-style annotations to exceptions for enhanced debugging context, inspired by Python's exception notes.
 
 ## Overview

@@ -1,8 +1,3 @@
----
-title: Exception Transformation
-description: Functionally transform exception properties using map functions, inspired by functional programming patterns.
----
-
 Functionally transform exception properties using map functions, inspired by functional programming patterns.
 
 ## Overview

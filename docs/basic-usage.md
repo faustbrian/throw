@@ -1,8 +1,3 @@
----
-title: Basic Usage
-description: The ConditionallyThrowable trait provides four core methods for conditional exception throwing. All methods support both boolean values and callbacks for lazy evaluation.
----
-
 The `ConditionallyThrowable` trait provides four core methods for conditional exception throwing. All methods support both boolean values and callbacks for lazy evaluation.
 
 ## throwIf()

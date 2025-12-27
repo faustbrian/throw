@@ -1,8 +1,3 @@
----
-title: Attempt Monad (Scala-Style Try)
-description: The attempt() helper provides a Scala-inspired Try monad for handling exceptions fluently. It wraps code execution and lets you handle success/failure with various strategies.
----
-
 The `attempt()` helper provides a Scala-inspired Try monad for handling exceptions fluently. It wraps code execution and lets you handle success/failure with various strategies.
 
 ## Core Concepts

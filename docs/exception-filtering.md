@@ -1,8 +1,3 @@
----
-title: Exception Filtering
-description: Search and filter through exception chains to find specific errors buried in wrapped exceptions.
----
-
 Search and filter through exception chains to find specific errors buried in wrapped exceptions.
 
 ## Overview

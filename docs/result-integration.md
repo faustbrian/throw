@@ -1,8 +1,3 @@
----
-title: Result Integration
-description: Convert between `Attempt` (Try monad) and `Result` type for explicit error handling without exceptions.
----
-
 Convert between `Attempt` (Try monad) and `Result` type for explicit error handling without exceptions.
 
 ## Overview

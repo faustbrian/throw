@@ -1,8 +1,3 @@
----
-title: Getting Started
-description: Throw provides a fluent, readable API for conditionally throwing exceptions in Laravel applications.
----
-
 Throw provides a fluent, readable API for conditionally throwing exceptions in Laravel applications.
 
 ## Requirements

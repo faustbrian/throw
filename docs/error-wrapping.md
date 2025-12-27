@@ -1,8 +1,3 @@
----
-title: Error Wrapping
-description: Wrap lower-level exceptions with domain-specific exceptions while preserving the original error for debugging. This pattern maintains clean error boundaries between application layers.
----
-
 Wrap lower-level exceptions with domain-specific exceptions while preserving the original error for debugging. This pattern maintains clean error boundaries between application layers.
 
 ## Overview

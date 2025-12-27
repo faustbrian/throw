@@ -1,8 +1,3 @@
----
-title: Error Comparison
-description: Go-inspired utilities for checking and casting exceptions through the exception chain.
----
-
 Go-inspired utilities for checking and casting exceptions through the exception chain.
 
 ## Overview
