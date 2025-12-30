@@ -16,7 +16,7 @@
         "cline/monad": "^1.1.1"
     },
     "require-dev": {
-        "cline/coding-standard": "^1.5.7",
+        "cline/coding-standard": "^1.6.3",
         "orchestra/testbench": "^10.8",
         "symfony/var-dumper": "^7.4.0"
     },
