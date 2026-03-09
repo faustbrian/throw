@@ -19,10 +19,10 @@ composer require cline/throw
 
 ## Documentation
 
-- **[Getting Started](cookbook/getting-started.md)** - Installation and basic usage
-- **[Basic Usage](cookbook/basic-usage.md)** - Throwing exceptions conditionally
-- **[HTTP Responses](cookbook/http-responses.md)** - Aborting requests with status codes
-- **[Integration Patterns](cookbook/integration-patterns.md)** - Using with Laravel exceptions
+- **[Getting Started](DOCS.md#doc-docs-readme)** - Installation and basic usage
+- **[Basic Usage](DOCS.md#doc-docs-basic-usage)** - Throwing exceptions conditionally
+- **[HTTP Responses](DOCS.md#doc-docs-http-responses)** - Aborting requests with status codes
+- **[Integration Patterns](DOCS.md#doc-docs-integration-patterns)** - Using with Laravel exceptions
 
 ## Change log
 

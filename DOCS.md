@@ -1,21 +1,23 @@
 ## Table of Contents
 
-1. Getting Started (`docs/README.md`)
-2. Basic Usage (`docs/basic-usage.md`)
-3. HTTP Responses (`docs/http-responses.md`)
-4. Integration Patterns (`docs/integration-patterns.md`)
-5. Assertions (`docs/assertions.md`)
-6. Attempt Monad (`docs/attempt-monad.md`)
-7. Base Exceptions (`docs/base-exceptions.md`)
-8. Deferred Cleanup (`docs/deferred-cleanup.md`)
-9. Error Comparison (`docs/error-comparison.md`)
-10. Error Context (`docs/error-context.md`)
-11. Error Wrapping (`docs/error-wrapping.md`)
-12. Exception Filtering (`docs/exception-filtering.md`)
-13. Exception Groups (`docs/exception-groups.md`)
-14. Exception Notes (`docs/exception-notes.md`)
-15. Exception Transformation (`docs/exception-transformation.md`)
-16. Result Integration (`docs/result-integration.md`)
+1. [Getting Started](#doc-docs-readme) (`docs/README.md`)
+2. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
+3. [HTTP Responses](#doc-docs-http-responses) (`docs/http-responses.md`)
+4. [Integration Patterns](#doc-docs-integration-patterns) (`docs/integration-patterns.md`)
+5. [Assertions](#doc-docs-assertions) (`docs/assertions.md`)
+6. [Attempt Monad](#doc-docs-attempt-monad) (`docs/attempt-monad.md`)
+7. [Base Exceptions](#doc-docs-base-exceptions) (`docs/base-exceptions.md`)
+8. [Deferred Cleanup](#doc-docs-deferred-cleanup) (`docs/deferred-cleanup.md`)
+9. [Error Comparison](#doc-docs-error-comparison) (`docs/error-comparison.md`)
+10. [Error Context](#doc-docs-error-context) (`docs/error-context.md`)
+11. [Error Wrapping](#doc-docs-error-wrapping) (`docs/error-wrapping.md`)
+12. [Exception Filtering](#doc-docs-exception-filtering) (`docs/exception-filtering.md`)
+13. [Exception Groups](#doc-docs-exception-groups) (`docs/exception-groups.md`)
+14. [Exception Notes](#doc-docs-exception-notes) (`docs/exception-notes.md`)
+15. [Exception Transformation](#doc-docs-exception-transformation) (`docs/exception-transformation.md`)
+16. [Result Integration](#doc-docs-result-integration) (`docs/result-integration.md`)
+<a id="doc-docs-readme"></a>
+
 Throw provides a fluent, readable API for conditionally throwing exceptions in Laravel applications.
 
 ## Requirements
@@ -63,9 +65,11 @@ InvalidTokenException::expired()->throwUnless($token->isValid());
 
 ## Next Steps
 
-- Learn about [Basic Usage](basic-usage.md) patterns
-- Explore [HTTP Responses](http-responses.md) for aborting requests
-- See [Integration Patterns](integration-patterns.md) for Laravel conventions
+- Learn about [Basic Usage](#doc-docs-basic-usage) patterns
+- Explore [HTTP Responses](#doc-docs-http-responses) for aborting requests
+- See [Integration Patterns](#doc-docs-integration-patterns) for Laravel conventions
+
+<a id="doc-docs-basic-usage"></a>
 
 The `ConditionallyThrowable` trait provides four core methods for conditional exception throwing. All methods support both boolean values and callbacks for lazy evaluation.
 
@@ -252,6 +256,8 @@ MissingTokenableException::forParentToken()->throwIf($tokenable === null);
 ```
 
 Both work identically - choose based on your team's preference or existing codebase conventions.
+
+<a id="doc-docs-http-responses"></a>
 
 The package provides multiple ways to abort HTTP requests with status codes: trait methods (`abortIf`, `abortUnless`), assertion helpers (`orAbort`, `orNotFound`, etc.), and a type-safe `HttpStatusCode` enum.
 
@@ -628,6 +634,8 @@ test('does not abort when condition is false', function () {
     expect(true)->toBeTrue(); // No exception thrown
 });
 ```
+
+<a id="doc-docs-integration-patterns"></a>
 
 This guide demonstrates how to integrate the Throw package with common Laravel patterns and third-party services.
 
@@ -1189,6 +1197,8 @@ class EnsureApiRateLimit
 }
 ```
 
+<a id="doc-docs-assertions"></a>
+
 Use the `ensure()` helper for fluent, readable guard clauses that throw exceptions or abort HTTP requests.
 
 ## Overview
@@ -1593,9 +1603,11 @@ test('does not throw when condition passes', function () {
 
 ## Next Steps
 
-- Learn about [Base Exceptions](base-exceptions.md) for creating domain-specific exceptions
-- Explore [Error Context](error-context.md) for adding debugging information
-- See [Error Wrapping](error-wrapping.md) for exception chains
+- Learn about [Base Exceptions](#doc-docs-base-exceptions) for creating domain-specific exceptions
+- Explore [Error Context](#doc-docs-error-context) for adding debugging information
+- See [Error Wrapping](#doc-docs-error-wrapping) for exception chains
+
+<a id="doc-docs-attempt-monad"></a>
 
 The `attempt()` helper provides a Scala-inspired Try monad for handling exceptions fluently. It wraps code execution and lets you handle success/failure with various strategies.
 
@@ -2074,6 +2086,8 @@ $user = $userAttempt->get(); // Throws if failed
 $user = $userAttempt->getOrElse(new Guest());
 ```
 
+<a id="doc-docs-base-exceptions"></a>
+
 Throw provides three base exception classes that categorize errors by their nature, making error handling more semantic and maintainable.
 
 ## Overview
@@ -2370,9 +2384,11 @@ try {
 
 ## Next Steps
 
-- Learn about [Error Context](error-context.md) for adding debugging information
-- Explore [Error Wrapping](error-wrapping.md) for preserving exception chains
-- See [Assertions](assertions.md) for the `ensure()` helper pattern
+- Learn about [Error Context](#doc-docs-error-context) for adding debugging information
+- Explore [Error Wrapping](#doc-docs-error-wrapping) for preserving exception chains
+- See [Assertions](#doc-docs-assertions) for the `ensure()` helper pattern
+
+<a id="doc-docs-deferred-cleanup"></a>
 
 Zig-inspired deferred cleanup that executes only when errors occur, ensuring resources are properly cleaned up on error paths.
 
@@ -2818,9 +2834,11 @@ DB::commit();
 
 ## See Also
 
-- [Error Wrapping](error-wrapping.md) - Wrapping lower-level exceptions
-- [Exception Notes](exception-notes.md) - Breadcrumb-style debugging
-- [Result Integration](result-integration.md) - Converting attempts to Result types
+- [Error Wrapping](#doc-docs-error-wrapping) - Wrapping lower-level exceptions
+- [Exception Notes](#doc-docs-exception-notes) - Breadcrumb-style debugging
+- [Result Integration](#doc-docs-result-integration) - Converting attempts to Result types
+
+<a id="doc-docs-error-comparison"></a>
 
 Go-inspired utilities for checking and casting exceptions through the exception chain.
 
@@ -3187,6 +3205,8 @@ test('Errors::as returns null when type not found', function () {
 - Not dealing with wrapped exceptions
 - Performance is critical (Errors methods traverse the chain)
 
+<a id="doc-docs-error-context"></a>
+
 Add structured debugging information to exceptions using context, tags, and metadata. This makes error tracking, logging, and monitoring significantly more effective.
 
 ## Overview
@@ -3526,9 +3546,11 @@ FeatureNotAvailableException::disabled()
 
 ## Next Steps
 
-- Learn about [Error Wrapping](error-wrapping.md) for exception chains
-- See [Base Exceptions](base-exceptions.md) for categorizing errors
-- Explore [Assertions](assertions.md) for the `ensure()` helper
+- Learn about [Error Wrapping](#doc-docs-error-wrapping) for exception chains
+- See [Base Exceptions](#doc-docs-base-exceptions) for categorizing errors
+- Explore [Assertions](#doc-docs-assertions) for the `ensure()` helper
+
+<a id="doc-docs-error-wrapping"></a>
 
 Wrap lower-level exceptions with domain-specific exceptions while preserving the original error for debugging. This pattern maintains clean error boundaries between application layers.
 
@@ -3934,9 +3956,11 @@ test('wraps PDOException', function () {
 
 ## Next Steps
 
-- Learn about [Error Context](error-context.md) for adding debugging data
-- See [Base Exceptions](base-exceptions.md) for choosing the right exception type
-- Explore [Assertions](assertions.md) for the `ensure()` helper pattern
+- Learn about [Error Context](#doc-docs-error-context) for adding debugging data
+- See [Base Exceptions](#doc-docs-base-exceptions) for choosing the right exception type
+- Explore [Assertions](#doc-docs-assertions) for the `ensure()` helper pattern
+
+<a id="doc-docs-exception-filtering"></a>
 
 Search and filter through exception chains to find specific errors buried in wrapped exceptions.
 
@@ -4512,9 +4536,11 @@ class RetryHandler
 
 ## See Also
 
-- [Error Context](error-context.md) - Structured context and metadata
-- [Error Wrapping](error-wrapping.md) - Wrapping lower-level exceptions
-- [Exception Notes](exception-notes.md) - Breadcrumb-style debugging
+- [Error Context](#doc-docs-error-context) - Structured context and metadata
+- [Error Wrapping](#doc-docs-error-wrapping) - Wrapping lower-level exceptions
+- [Exception Notes](#doc-docs-exception-notes) - Breadcrumb-style debugging
+
+<a id="doc-docs-exception-groups"></a>
 
 Handle multiple exceptions as a single unit, inspired by Python 3.11's exception groups. Perfect for validation scenarios where multiple errors can occur simultaneously.
 
@@ -4942,9 +4968,11 @@ throw $group;
 
 ## See Also
 
-- [Assertions](assertions.md) - Single exception throwing
-- [Error Context](error-context.md) - Adding context to exceptions
-- [Basic Usage](basic-usage.md) - Conditional exception throwing
+- [Assertions](#doc-docs-assertions) - Single exception throwing
+- [Error Context](#doc-docs-error-context) - Adding context to exceptions
+- [Basic Usage](#doc-docs-basic-usage) - Conditional exception throwing
+
+<a id="doc-docs-exception-notes"></a>
 
 Add breadcrumb-style annotations to exceptions for enhanced debugging context, inspired by Python's exception notes.
 
@@ -5421,9 +5449,11 @@ try {
 
 ## See Also
 
-- [Error Context](error-context.md) - Structured context and metadata
-- [Error Wrapping](error-wrapping.md) - Wrapping lower-level exceptions
-- [Exception Groups](exception-groups.md) - Handling multiple exceptions
+- [Error Context](#doc-docs-error-context) - Structured context and metadata
+- [Error Wrapping](#doc-docs-error-wrapping) - Wrapping lower-level exceptions
+- [Exception Groups](#doc-docs-exception-groups) - Handling multiple exceptions
+
+<a id="doc-docs-exception-transformation"></a>
 
 Functionally transform exception properties using map functions, inspired by functional programming patterns.
 
@@ -5932,9 +5962,11 @@ try {
 
 ## See Also
 
-- [Error Context](error-context.md) - Structured context and metadata
-- [Exception Notes](exception-notes.md) - Breadcrumb-style debugging
-- [Error Wrapping](error-wrapping.md) - Wrapping lower-level exceptions
+- [Error Context](#doc-docs-error-context) - Structured context and metadata
+- [Exception Notes](#doc-docs-exception-notes) - Breadcrumb-style debugging
+- [Error Wrapping](#doc-docs-error-wrapping) - Wrapping lower-level exceptions
+
+<a id="doc-docs-result-integration"></a>
 
 Convert between `Attempt` (Try monad) and `Result` type for explicit error handling without exceptions.
 
@@ -6194,6 +6226,6 @@ if ($failures->isNotEmpty()) {
 
 ## See Also
 
-- [Attempt Monad](attempt-monad.md) - Try monad for exception handling
-- [Error Wrapping](error-wrapping.md) - Wrapping lower-level exceptions
-- [Integration Patterns](integration-patterns.md) - Using with Laravel
+- [Attempt Monad](#doc-docs-attempt-monad) - Try monad for exception handling
+- [Error Wrapping](#doc-docs-error-wrapping) - Wrapping lower-level exceptions
+- [Integration Patterns](#doc-docs-integration-patterns) - Using with Laravel
